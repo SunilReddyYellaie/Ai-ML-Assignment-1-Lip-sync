@@ -30,8 +30,8 @@ The code that is provided is attempting to read a video file and display it as a
 # Use resize_factor to reduce the video resolution, as there is a change you might get better results for lower resolution videos.
 !cd Wav2Lip && python inference.py --checkpoint_path checkpoints/wav2lip_gan.pth --face "/content/sample_data/input_video.mp4" --audio "/content/sample_data/input_audio.wav" --resize_factor 2
 - code run the Wav2Lip inference script with the specified parameters to generate a lip-synced video. If the script completed successfully, you will now have a result video.
-  # Use more padding to include the chin region
-   !cd Wav2Lip && python inference.py --checkpoint_path checkpoints/wav2lip_gan.pth --face "/content/sample_data/input_video.mp4" --audio "/content/sample_data/input_audio.wav" --pads 0 20 0 0
-  it run the Wav2Lip inference script again with some additional parameters, specifically the --pads parameter. The --pads parameter is used to specify padding values for the input video frame. In your command, you've set it to 0 20 0 0.
+# Use more padding to include the chin region
+ !cd Wav2Lip && python inference.py --checkpoint_path checkpoints/wav2lip_gan.pth --face "/content/sample_data/input_video.mp4" --audio "/content/sample_data/input_audio.wav" --pads 0 20 0 0
+ -it run the Wav2Lip inference script again with some additional parameters, specifically the --pads parameter. The --pads parameter is used to specify padding values for the input video frame. In your command, you've set it to 0 20 0 0.
 These values likely represent padding values for the top, right, bottom, and left sides of the video frame, respectively. These values can be adjusted to control the positioning of the synthesized lip movements on the video frame.
 If the script completed successfully, you can use the previously provided code to display the resulting lip-synced video 
